@@ -7,13 +7,18 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="World">
-      <sprite>sprites\spr_group</sprite>
+      <sprite>sprites\sGroup</sprite>
+      <sprite>sprites\sWorldPlayerDir</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\isMouseInsideView.gml</script>
+  </scripts>
   <objects name="objects">
-    <object>objects\obj_wPlayer</object>
+    <object>objects\oPlayer</object>
+    <object>objects\oHud</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
