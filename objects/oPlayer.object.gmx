@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (mouse_check_button(mb_left) &amp;&amp; isMouseInsideView(1)){
+            <string>if (mouse_check_button(mb_left) &amp;&amp; isMouseInsideView(1) &amp;&amp; !position_meeting(mouse_x, mouse_y, oPlayer)){
     move_towards_point(mouse_x, mouse_y, movementSpeed);
 }
 
@@ -77,15 +77,49 @@ mouseDirection = point_direction(x, y, mouse_x, mouse_y);
             <kind>1</kind>
             <string>draw_self();
 
-if (isMouseInsideView(1))
+if (isMouseInsideView(1) &amp;&amp; !position_meeting(mouse_x, mouse_y, oPlayer))
     draw_sprite_ext(sWorldPlayerDir, 0, x, y, 1, 1, mouseDirection, c_black, 255);
-
-if (view_current == 0){
-  
-}
 </string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="123">
+      <action>
+        <libid>1</libid>
+        <id>531</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_fullscreen</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="27">
+      <action>
+        <libid>1</libid>
+        <id>332</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_end_game</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
   </events>
