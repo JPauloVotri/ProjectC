@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>movementSpeed = 4;
+            <string>movementSpeed = 2;
 </string>
           </argument>
         </arguments>
@@ -48,8 +48,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (mouse_check_button(mb_left) &amp;&amp; isMouseInsideView(1) &amp;&amp; !position_meeting(mouse_x, mouse_y, oPlayer)){
+            <string>if (mouse_check_button_pressed(mb_left) &amp;&amp;
+    isMouseInsideView(1)){
+  if (!position_meeting(mouse_x, mouse_y, oPlayer))
     move_towards_point(mouse_x, mouse_y, movementSpeed);
+  else if (speed == 0)
+    speed = movementSpeed;
+  else
+    speed = 0;
 }
 
 mouseDirection = point_direction(x, y, mouse_x, mouse_y);
