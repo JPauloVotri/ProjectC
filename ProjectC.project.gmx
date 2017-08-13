@@ -283,16 +283,20 @@
     <sprites name="World">
       <sprite>sprites\sGroup</sprite>
       <sprite>sprites\sWorldPlayerDir</sprite>
+      <sprite>sprites\sCity</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\isMouseInsideView.gml</script>
+    <script>scripts\cityName.gml</script>
+    <script>scripts\enterCity.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\oPlayer</object>
     <object>objects\oHud</object>
+    <object>objects\oCity</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
