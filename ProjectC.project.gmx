@@ -286,7 +286,9 @@
       <sprite>sprites\sCity</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bgTest</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\isMouseInsideView.gml</script>
@@ -295,6 +297,9 @@
     <script>scripts\moveTowards.gml</script>
     <script>scripts\move.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fontTest</font>
+  </fonts>
   <objects name="objects">
     <object>objects\oPlayer</object>
     <object>objects\oHud</object>
