@@ -292,6 +292,8 @@
     <script>scripts\isMouseInsideView.gml</script>
     <script>scripts\cityName.gml</script>
     <script>scripts\enterCity.gml</script>
+    <script>scripts\moveTowards.gml</script>
+    <script>scripts\move.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\oPlayer</object>

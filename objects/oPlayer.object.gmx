@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>movementSpeed = 2;
 
+angle  = 0;
+spd    = 0;
 onCity = false;
 </string>
           </argument>
@@ -55,14 +57,15 @@ onCity = false;
 if (mouse_check_button_pressed(mb_left) &amp;&amp;
     isMouseInsideView(1)){
   if (!position_meeting(mouse_x, mouse_y, oPlayer))
-    move_towards_point(mouse_x, mouse_y, movementSpeed);
-  else if (speed == 0)
+    moveTowards(mouseDirection, movementSpeed)
+    //move_towards_point(mouse_x, mouse_y, movementSpeed);
+  else if (spd == 0)
     if (onCity)
       onCity = false;
     else
-      speed = movementSpeed;
+      spd = movementSpeed;
   else
-    speed = 0;
+    spd = 0;
 }
 
 tempCity = instance_place(x, y, oCity);
@@ -72,6 +75,46 @@ if (!onCity){
 }else if (!place_meeting(x, y, oCity))
   onCity = false;
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>move</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -122,6 +165,22 @@ if (isMouseInsideView(1) &amp;&amp; !position_meeting(mouse_x, mouse_y, oPlayer)
             <string>0</string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="122">
+      <action>
+        <libid>1</libid>
+        <id>331</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_restart_game</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="9" enumb="27">

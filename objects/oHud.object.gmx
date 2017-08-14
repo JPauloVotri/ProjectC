@@ -35,7 +35,7 @@
 
   // Desenha as informações de Debug
   draw_set_color(c_white);
-  draw_text(650, 10, "view_xport: "+string(view_xport[1])+"#"+
+  draw_text(650, 10, /*"view_xport: "+string(view_xport[1])+"#"+
                      "view_yport: "+string(view_yport[1])+"#"+
                      "view_wport: "+string(view_wport[1])+"#"+
                      "view_hport: "+string(view_hport[1])+"##"+
@@ -44,17 +44,28 @@
                      "view_wview: "+string(view_wview[1])+"#"+
                      "view_hview: "+string(view_hview[1])+"##"+
                      "mouse_x: "+string(window_view_mouse_get_x(1))+"#"+
-                     "mouse_y: "+string(window_view_mouse_get_y(1))+"##"+
-                     "mouse_col: "+string(position_meeting(mouse_x, mouse_y, oPlayer)));
+                     "mouse_y: "+string(window_view_mouse_get_y(1))+"##"+*/
+                     "x: "+string(oPlayer.x)+"#"+
+                     "y: "+string(oPlayer.y)+"#"+
+                     "angle: "+string(oPlayer.angle)+"#"+
+                     "angleCos: "+string(oPlayer.angleCos)+"#"+
+                     "angleSin: "+string(oPlayer.angleSin)+"#"+
+                     "spd: "+string(oPlayer.spd)+"#"+
+                     "xSpeed: "+string(oPlayer.xSpeed)+"#"+
+                     "xSpeedFloor: "+string(oPlayer.xSpeedFloor)+"#"+
+                     "ySpeed: "+string(oPlayer.ySpeed)+"#"+
+                     "ySpeedFloor: "+string(oPlayer.ySpeedFloor)+"#"+
+                     "xRemainder: "+string(oPlayer.xRemainder)+"#"+
+                     "yRemainder: "+string(oPlayer.yRemainder)+"#");
   
   draw_set_color(c_black);
 }
 
 if (view_current == 1){
   if (position_meeting(mouse_x, mouse_y, oPlayer))
-    draw_text(view_xview[1], view_yview[1], string(oPlayer.direction));
+    draw_text(view_xview[1], view_yview[1], string(oPlayer.angle));
   else if (isMouseInsideView(1))
-    draw_text(view_xview[1], view_yview[1], string(point_direction(oPlayer.x, oPlayer.y, mouse_x, mouse_y)));
+    draw_text(view_xview[1], view_yview[1], string(oPlayer.mouseDirection));
 }
 </string>
           </argument>
