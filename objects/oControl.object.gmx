@@ -133,10 +133,17 @@ if (view_current = 0){
 }
 
 if (view_current == 1 &amp;&amp; !mapOpen){
-  if (position_meeting(mouse_x, mouse_y, oPlayer))
-    draw_text(view_xview[1], view_yview[1], string(oPlayer.angle));
-  else if (isMouseInsideView(1))
-    draw_text(view_xview[1], view_yview[1], string(oPlayer.mouseDirection));
+  if (position_meeting(mouse_x, mouse_y, oPlayer)){
+    draw_set_colour(c_black);
+    draw_set_halign(fa_left);
+    draw_set_valign(fa_top);
+    draw_text(view_xview[1]+2, view_yview[1], string(oPlayer.angle));
+  }else if (isMouseInsideView(1)){
+    draw_set_colour(c_black);
+    draw_set_halign(fa_left);
+    draw_set_valign(fa_top);
+    draw_text(view_xview[1]+2, view_yview[1], string(oPlayer.mouseDirection));
+  }
 }
 </string>
           </argument>
