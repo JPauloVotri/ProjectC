@@ -1,10 +1,11 @@
-viewId     = argument0;
-viewX      = view_xview[viewId]
-viewY      = view_yview[viewId]
-viewWidth  = view_wview[viewId] + viewX;
-viewHeight = view_hview[viewId] + viewY;
-mouseViewX = window_view_mouse_get_x(viewId);
-mouseViewY = window_view_mouse_get_y(viewId);
+/// isMouseInsideView(view);
+view       = argument0;
+viewX      = view_xview[view]
+viewY      = view_yview[view]
+viewWidth  = view_wview[view] + viewX;
+viewHeight = view_hview[view] + viewY;
+mouseViewX = window_view_mouse_get_x(view);
+mouseViewY = window_view_mouse_get_y(view);
 
 if (mouseViewX >= viewX &&
     mouseViewY >= viewY &&

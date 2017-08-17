@@ -54,21 +54,20 @@ onCity = false;
             <kind>1</kind>
             <string>mouseDirection = point_direction(x, y, mouse_x, mouse_y);
 
-if (mouse_check_button_pressed(mb_left) &amp;&amp;
-    isMouseInsideView(1)){
+if (mouse_check_button_pressed(mb_left) &amp;&amp; isMouseInsideView(1)){
   if (!position_meeting(mouse_x, mouse_y, oPlayer))
-    moveTowards(mouseDirection, movementSpeed)
-    //move_towards_point(mouse_x, mouse_y, movementSpeed);
-  else if (spd == 0)
+    moveTowards(mouseDirection, movementSpeed);
+  else if (spd == 0){
     if (onCity)
       onCity = false;
     else
       spd = movementSpeed;
-  else
+  }else
     spd = 0;
 }
 
 tempCity = instance_place(x, y, oCity);
+
 if (!onCity){
   if (tempCity != noone)
     enterCity(tempCity.cityId);
@@ -143,60 +142,6 @@ if (isMouseInsideView(1) &amp;&amp; !position_meeting(mouse_x, mouse_y, oPlayer)
 </string>
           </argument>
         </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="123">
-      <action>
-        <libid>1</libid>
-        <id>531</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_fullscreen</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="122">
-      <action>
-        <libid>1</libid>
-        <id>331</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_restart_game</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-    </event>
-    <event eventtype="9" enumb="27">
-      <action>
-        <libid>1</libid>
-        <id>332</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_end_game</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
       </action>
     </event>
   </events>
