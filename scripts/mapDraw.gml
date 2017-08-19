@@ -9,7 +9,7 @@ for (i=0; i < cityCount; i+=1){
   
   draw_set_halign(fa_center);
   draw_set_valign(fa_top);
-  draw_text_transformed(cityX, cityY+32, cityName, 6, 6, 0);
+  draw_text_transformed(cityX, cityY+32, cityName, 6/zoomLevel, 6/zoomLevel, 0);
 }
 
 ini_close();
