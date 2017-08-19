@@ -295,10 +295,13 @@
     <script>scripts\enterCity.gml</script>
     <script>scripts\moveTowards.gml</script>
     <script>scripts\move.gml</script>
-    <script>scripts\mapDraw.gml</script>
-    <script>scripts\mapDrag.gml</script>
-    <script>scripts\mapZoom.gml</script>
-    <script>scripts\mapControl.gml</script>
+    <scripts name="mapFunctions">
+      <script>scripts\mapInit.gml</script>
+      <script>scripts\mapControl.gml</script>
+      <script>scripts\mapDraw.gml</script>
+      <script>scripts\mapDrag.gml</script>
+      <script>scripts\mapZoom.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontTest</font>

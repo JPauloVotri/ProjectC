@@ -1,16 +1,13 @@
-///mapZoom(amount, view);
-amount = 1+argument0;
-view   = argument1;
+///mapZoom(increase, view);
+increase = argument0;
+view     = argument1;
 
-maxHeight = 4800;
-minHeight = 480;
-
-baseWidth  = 6400;
-baseHeight = 4800;
+if (increase) amount = 0.5 else amount = 2;
 
 // Limita o nivel de zoom
-if (view_hview[view]*amount <= minHeight && amount < 1) exit;
-if (view_hview[view]*amount >= maxHeight && amount > 1) exit;
+if (zoomLevel/amount > zoomMax) exit;
+if (zoomLevel/amount < zoomMin) exit;
+zoomLevel /= amount;
 
 // Pega os novos limites da view
 xOff = abs(view_wview[view]*amount - view_wview[view]);
