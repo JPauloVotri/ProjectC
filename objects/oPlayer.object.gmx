@@ -54,7 +54,8 @@ onCity = false;
             <kind>1</kind>
             <string>mouseDirection = point_direction(x, y, mouse_x, mouse_y);
 
-if (mouse_check_button_pressed(mb_left) &amp;&amp; isMouseInsideView(1)){
+if (inputCheckPressed(key("worldGo")) &amp;&amp; isMouseInsideView(1)){
+//if (mouse_check_button_pressed(mb_left) &amp;&amp; isMouseInsideView(1)){
   if (!position_meeting(mouse_x, mouse_y, oPlayer))
     moveTowards(mouseDirection, movementSpeed);
   else if (spd == 0){

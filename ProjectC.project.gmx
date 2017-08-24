@@ -302,6 +302,12 @@
       <script>scripts\mapDrag.gml</script>
       <script>scripts\mapZoom.gml</script>
     </scripts>
+    <scripts name="inputFunctions">
+      <script>scripts\inputCheck.gml</script>
+      <script>scripts\inputCheckPressed.gml</script>
+      <script>scripts\inputCheckReleased.gml</script>
+      <script>scripts\key.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontTest</font>
