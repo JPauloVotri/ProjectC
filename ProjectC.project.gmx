@@ -291,23 +291,25 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\isMouseInsideView.gml</script>
-    <script>scripts\enterCity.gml</script>
-    <script>scripts\moveTowards.gml</script>
-    <script>scripts\move.gml</script>
-    <scripts name="mapFunctions">
-      <script>scripts\mapInit.gml</script>
-      <script>scripts\mapControl.gml</script>
-      <script>scripts\mapDraw.gml</script>
-      <script>scripts\mapDrag.gml</script>
-      <script>scripts\mapZoom.gml</script>
-    </scripts>
     <scripts name="inputFunctions">
       <script>scripts\inputCheck.gml</script>
       <script>scripts\inputCheckPressed.gml</script>
       <script>scripts\inputCheckReleased.gml</script>
       <script>scripts\key.gml</script>
     </scripts>
+    <scripts name="mapFunctions">
+      <script>scripts\mapInit.gml</script>
+      <script>scripts\mapControl.gml</script>
+      <script>scripts\mapDraw.gml</script>
+      <script>scripts\mapDrag.gml</script>
+      <script>scripts\mapZoom.gml</script>
+      <script>scripts\mapNavigation.gml</script>
+    </scripts>
+    <script>scripts\isMouseInsideView.gml</script>
+    <script>scripts\enterCity.gml</script>
+    <script>scripts\moveTowards.gml</script>
+    <script>scripts\move.gml</script>
+    <script>scripts\journeyLength.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontTest</font>

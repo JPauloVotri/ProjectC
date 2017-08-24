@@ -7,3 +7,4 @@ if (mouse_wheel_down())
   mapZoom(false, view);
   
 mapDrag();
+mapNavigation();

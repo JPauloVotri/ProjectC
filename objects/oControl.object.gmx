@@ -161,7 +161,10 @@ if (view_current = 0){
                        "mouseViewX: "+string(window_view_mouse_get_x(2))+"#"+
                        "mouseViewY: "+string(window_view_mouse_get_y(2))+"#"+
                        "zoomLevel: "+string(zoomLevel)+"#"+
-                       "zoomLevel/amount: "+string(zoomLevel/amount)+"#");
+                       "zoomLevel/amount: "+string(zoomLevel/amount)+"#"+
+                       "Duração: "+string(journeyLength(mapLineDistance, global.movementSpeed, false))+"#"+
+                       "Duração Abs.: "+string(journeyLength(mapLineDistance, global.movementSpeed, true))+"#"+
+                       "tempCity: "+string(tempCity)+"#");
     exit;
   }
   draw_text(650, 10, /*"view_xport: "+string(view_xport[1])+"#"+
